@@ -1,0 +1,25 @@
+.header {
+    padding-inline: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+
+    &__tabs {
+        max-width: 567px;
+        width: 100%;
+    }
+
+    @media (max-width: 991px) {
+        &__tabs {
+            max-width: 436px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            min-height: 1px;
+            padding: 16px 16px 8px;
+        }
+    }
+}

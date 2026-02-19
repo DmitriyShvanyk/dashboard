@@ -1,0 +1,41 @@
+@use '../abstracts/variable' as *;
+
+$btn-gradient: linear-gradient(357.03deg, #005890 2.66%, #2A78A8 109.42%);
+$btn-gradient-hover: linear-gradient(357.03deg, #004875 2.66%, #005890 109.42%);
+
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    height: 36px;
+    color: $white;
+    background: $btn-gradient;
+    border: 1px solid rgba(148, 148, 148, .75);
+    box-shadow: 0 .5px 2.5px rgba($black, .3), 0 0 0 0.5px rgba($black, .05);
+    border-radius: 360px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .15px;
+    text-decoration: none;
+    appearance: none;
+    box-shadow: none;
+    transition: opacity .3s ease;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    border-radius: 100px;
+    outline: none;
+    transition: background-color .2s ease-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $btn-gradient-hover;
+        border: 1px solid rgba(148, 148, 148, .75);
+        box-shadow: 0 .5px 2.5px rgba($black, .3), 0 0 0 .5px rgba($black, .05);
+    }
+}

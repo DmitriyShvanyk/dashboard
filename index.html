@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard || Billing || Balance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your account balance, review billing details, and manage payments from your dashboard.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css?v=1">
+</head>
+<body>
+
+    <!--dashboard.begin-->
+    <div class="dashboard">
+
+        <!--navbar-mobile.begin-->
+        <nav class="navbar">
+            <button class="navbar__burger" type="button" aria-label="Burger">
+                <svg class="navbar__icon">
+                    <use xlink:href="#i-burger"></use>
+                </svg>
+            </button>
+            <a href="#" class="logo navbar__logo">Logos</a>
+            <button class="navbar__user" type="button" aria-label="Profile">
+                <svg class="navbar__icon">
+                    <use xlink:href="#i-user"></use>
+                </svg>
+            </button>
+        </nav>
+        <!--navbar-mobile.end-->
+
+        <!--sidebar.begin-->
+        <aside class="sidebar">
+            <div class="sidebar__head">
+                <a href="#" class="logo">Logos</a>
+                <button class="sidebar__close" aria-label="Close">
+                    <svg>
+                        <use xlink:href="#i-close"></use>
+                    </svg>
+                </button>
+            </div>            
+            <div class="sidebar__body">
+                <nav class="sidebar__menu">
+                    <ul class="sidebar__list">                    
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Communicate</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Schedule</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Grades</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Attendance</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Counseling</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Alerts</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Transcript</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Re-Enroll</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link is-active">Billing</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">Service Hours</a>
+                        </li>
+                    </ul>
+                </nav>                
+            </div>
+        </aside>
+        <!--sidebar.begin-->        
+
+        <!--layout.begin-->
+        <div class="layout">
+
+            <!--header.begin-->
+            <header class="header">
+                <nav class="tabs header__tabs">
+                    <ul class="tabs__list">
+                        <li class="tabs__item"><button class="tabs__link is-active" data-target="balance">Balance</button></li>
+                        <li class="tabs__item"><button class="tabs__link" data-target="statements">Statements</button></li>
+                        <li class="tabs__item"><button class="tabs__link" data-target="autopay">AutoPay</button></li>
+                    </ul>
+                </nav>
+
+                <div class="user-action">
+                    <button class="user-action__btn" type="button">
+                        <span class="user-action__icon">
+                            <svg>
+                                <use xlink:href="#i-print"></use>
+                            </svg>
+                        </span>                        
+                        <span class="user-action__text">Print</span>
+                    </button>
+                    <button class="user-action__btn" type="button" title="Barthohhhhhhhhhhhhhh">
+                        <span class="user-action__icon">
+                            <svg>
+                                <use xlink:href="#i-user"></use>
+                            </svg>
+                        </span>                        
+                        <span class="user-action__text">Barthohhhhhhhhhhhhhh</span>
+                    </button>
+                </div>
+            </header>
+            <!--header.end-->
+
+            <!--content.begin-->
+            <main class="content">
+
+                <!--balance.begin-->
+                <section class="content__block" id="balance">
+                    <div class="content__head">
+                        <h1 class="content__title">Balance</h1>
+                    </div>
+                    <div class="content__body">                        
+                        <div class="balance">
+                            <div class="balance__column">
+                                <div class="balance__cards">
+                                    <div class="balance__cards-body">
+                                        <div class="balance__cards-column">
+                                            <h2 class="balance__cards-title">Total Balance</h2>
+                                            <div class="balance__cards-value"><data value="1545.00">$1,545.00</data></div>
+                                        </div>
+                                        <div class="balance__cards-column">
+                                            <h2 class="balance__cards-title">Remaining Balance</h2>
+                                            <div class="balance__cards-value"><data value="1545.00">$1,545.00</data></div>
+                                            <div class="balance__cards-payment">Payment Due: <time datetime="2024-06-05">06/05/2024</time></div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="balance__cards-foot">
+                                        <div class="balance__cards-column">
+                                            <p class="balance__cards-caption">If you are making a one time payment for something, please add a note.</p>
+                                        </div>
+                                        <div class="balance__cards-column">
+                                            <button class="btn balance__cards-btn" type="button">Go to Payment</button>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="balance__column">
+                                <div class="balance__overview">
+                                    <div class="balance__block">
+                                        <h2 class="balance__title">Total Outstanding Balances</h2>
+                                        <ul class="balance__list">
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Enrollment/ Registration Fees</span>
+                                                <span class="balance__list-value is-tertiary"><data value="0.00">$0.00</data></span>                                    
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Field Trips 6th Grade</span>
+                                                <span class="balance__list-value is-tertiary"><data value="0.00">$0.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Friday School</span>
+                                                <span class="balance__list-value"><data value="1602.00">$1,602.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Sports Fee Football</span>
+                                                <span class="balance__list-value is-tertiary"><data value="0.00">$0.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Tuition</span>
+                                                <span class="balance__list-value"><data value="5768.00">$5,768.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Sports Fees</span>
+                                                <span class="balance__list-value is-tertiary"><data value="0.00">$0.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Sports Fees</span>
+                                                <span class="balance__list-value is-tertiary"><data value="0.00">$0.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Friday School Payment</span>
+                                                <span class="balance__list-value is-success"><data value="-930.00">-$930.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Multi-Child Discount</span>
+                                                <span class="balance__list-value is-success"><data value="-489.50">-$489.50</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Registration Fees</span>
+                                                <span class="balance__list-value is-tertiary"><data value="0.00">$0.00</data></span>
+                                            </li>
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Tuition Payment</span>
+                                                <span class="balance__list-value is-success"><data value="-4405.50">-$4,405.50</data></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="balance__block">
+                                        <h2 class="balance__title">Summary</h2>
+                                        <ul class="balance__list">
+                                            <li class="balance__list-item">
+                                                <span class="balance__list-text">Statement Balance:</span>
+                                                <span class="balance__list-value is-primary"><data value="1545.00">$1,545.00</data></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--balance.end-->
+
+                <!--statements.begin-->
+                <section class="content__block" id="statements">
+                    <div class="content__head">
+                        <h1 class="content__title">Statements</h1>
+                    </div>
+                </section>
+                <!--statements.end-->   
+
+                <!--autopay.begin-->
+                <section class="content__block" id="autopay">
+                    <div class="content__head">
+                        <h1 class="content__title">Autopay</h1>
+                    </div>
+                </section>
+                <!--autopay.end-->   
+
+            </main>
+            <!--content.end-->
+
+        </div>
+        <!--layout.end-->
+
+    </div>
+    <!--dashboard.end-->
+
+    <!-- svg sprites.begin -->
+    <svg style="display: none;" class="sr-only" version="1.1" height="0" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="i-user" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clipUser)">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.35 18.5C8.66 17.56 10.26 17 12 17C13.74 17 15.34 17.56 16.65 18.5C15.34 19.44 13.74 20 12 20C10.26 20 8.66 19.44 7.35 18.5ZM18.14 17.12C16.45 15.8 14.32 15 12 15C9.68 15 7.55 15.8 5.86 17.12C4.7 15.73 4 13.95 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 13.95 19.3 15.73 18.14 17.12Z" fill="currentColor"/>
+                <path d="M12 6C10.07 6 8.5 7.57 8.5 9.5C8.5 11.43 10.07 13 12 13C13.93 13 15.5 11.43 15.5 9.5C15.5 7.57 13.93 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z" fill="currentColor"/>
+            </g>
+            <defs>
+                <clipPath id="clipUser">
+                    <path d="M0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="white"/>
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol id="i-print" viewBox="0 0 24 24" fill="none">
+            <path d="M19 8H18V3H6V8H5C3.34 8 2 9.34 2 11V17H6V21H18V17H22V11C22 9.34 20.66 8 19 8ZM8 5H16V8H8V5ZM16 19H8V15H16V19ZM18 15V13H6V15H4V11C4 10.45 4.45 10 5 10H19C19.55 10 20 10.45 20 11V15H18Z" fill="#4D4D4D"/>
+            <path d="M18 12.5C18.5523 12.5 19 12.0523 19 11.5C19 10.9477 18.5523 10.5 18 10.5C17.4477 10.5 17 10.9477 17 11.5C17 12.0523 17.4477 12.5 18 12.5Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-burger" viewBox="0 0 24 24" fill="none">
+            <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 640 640" fill="none">
+            <path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" fill="currentColor"/>
+        </symbol>
+    </svg>
+    <!-- svg sprites.end -->
+
+    <!-- scripts.begin -->
+    <script src="js/scripts.js?v=1"></script>
+    <!-- scripts.end -->
+
+</body>
+</html>

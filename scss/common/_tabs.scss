@@ -1,0 +1,48 @@
+@use '../abstracts/variable' as *;
+@use '../base/mixin' as *;
+
+.tabs {
+    &__list {
+        @include list-reset;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        background-color: rgba($tertiary, .12);
+        border-radius: 10px;
+        min-height: 40px;
+        padding: 1px 2px;
+        margin-block: 0;
+        overflow: hidden;
+    }
+
+    &__item {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    &__link {
+        cursor: pointer;
+        width: 100%;
+        color: $secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        min-height: 36px;
+        border-radius: 8px;
+        border: none;
+        box-shadow: none;
+        transition: background-color .3s ease, box-shadow .3s ease;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            background-color: rgba($tertiary, .12);
+        }
+
+        &.is-active {
+            background-color: $white;
+            box-shadow: 0 3px 1px rgba($black,.04), 0 3px 8px rgba($black,.12);
+        }
+    }
+}

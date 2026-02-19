@@ -1,0 +1,30 @@
+@use '../abstracts/variable' as *;
+
+.navbar {
+    height: 42px;
+    background-color: $core-blue-800;    
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 1rem;
+
+    &__burger,
+    &__user {
+        background-color: transparent;
+        border: none;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        padding: 0;
+    }
+
+    @media (max-width: 767px) {
+        & {
+            display: flex;
+        }
+    }
+}

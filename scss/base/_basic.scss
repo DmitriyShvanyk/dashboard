@@ -1,0 +1,43 @@
+@use '../abstracts/variable' as *;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    scroll-behavior: smooth;
+}
+
+body,
+form,
+input,
+button {
+    font-family: $font-default;
+    font-size: $font-size-default;
+    line-height: $line-height-default;
+    letter-spacing: $letter-spacing;
+    font-weight: 400;
+}
+
+body {
+    color: $primary;
+    background-color: $white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}

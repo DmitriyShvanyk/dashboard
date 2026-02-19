@@ -1,0 +1,100 @@
+@use '../abstracts/variable' as *;
+@use '../base/mixin' as *;
+
+.sidebar {
+    width: 160px;
+    background-color: $core-blue-800;
+    padding: 20px 8px;
+
+    &__head {
+        padding-inline: 16px;
+    }
+
+    &__close {
+        color: $white;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        width: 24px;
+        height: 24px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        transition: opacity .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .8;
+        }
+    }
+
+    &__body {
+        padding-top: 14px;
+    }
+
+    &__list {
+        @include list-reset;
+    }
+
+    &__item {
+        margin-bottom: 4px;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: background-color .3s ease, box-shadow .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgba($white, .1);
+        }
+
+        &.is-active {
+            background-color: #005890;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    @media (min-width: 1441px) {
+        & {
+            width: 15%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-height: 100vh;
+            width: 100%;
+            overflow-y: auto;
+            z-index: 99;
+            transform: translateX(100vw);
+            will-change: transform;
+            transition: transform .5s ease;
+
+            &.is-open {
+                transform: translateX(0);
+            }
+        }
+
+        &__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__close {
+            display: flex;
+        }
+    }
+}
