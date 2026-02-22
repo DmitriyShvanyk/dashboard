@@ -4,7 +4,7 @@
 .balance {
     display: flex;
     flex-direction: column;
-    max-width: 952px;
+    max-width: 956px;
 
     &__block {
         margin-bottom: 24px;
@@ -14,8 +14,9 @@
         font-size: 20px;
         line-height: 1.3;
         font-weight: 500;
-        margin-top: 0;
         letter-spacing: 0;
+        margin-top: 0;
+        margin-bottom: 14px;        
     }
 
     &__list {
@@ -31,6 +32,7 @@
         &-value {
             color: $secondary;
             font-weight: 500;
+            letter-spacing: .15px;
 
             &.is-primary {
                 color: $primary;
@@ -38,7 +40,7 @@
 
             &.is-tertiary {
                 color: $tertiary;
-                color: #767676;
+                /*color: #767676;*/
             }
 
             &.is-success {
@@ -61,7 +63,11 @@
         }
 
         &-body+&-foot {
-            padding-top: 16px;
+            padding-top: 17px;
+        }
+
+        &-foot {
+            column-gap: 18px;
         }
 
         &-title {
@@ -76,10 +82,9 @@
             font-weight: 600;
             font-size: 28px;
             line-height: 1.14;
-            color: $primary;
             letter-spacing: 0;
-            margin-top: 2px;
-            margin-bottom: 6px;
+            margin-top: 5px;
+            margin-bottom: 2px;  
         }
 
         &-payment {
@@ -95,8 +100,8 @@
 
         &-caption {
             margin-block: 0;
-            /*color: $tertiary*/
-            color: #6B6B6B;
+            color: $tertiary;
+            /*color: #6B6B6B;*/
             font-size: 12px;
             line-height: 1.3;
             letter-spacing: .4px;
@@ -115,7 +120,7 @@
 
         &__column {
             flex-grow: 1;
-            flex-basis: 0;
+            flex-basis: 0;            
         }
 
         &__overview {
@@ -126,6 +131,15 @@
         &__cards {
             order: 2;
             text-align: center;
+            padding-inline: 10px;            
+
+            &-foot {
+                padding-left: 8px;
+            }
+
+            &-btn {
+                margin-left: 5px;
+            }
         }
     }
 
@@ -135,16 +149,31 @@
         }
 
         &__cards {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.6rem;
             justify-content: space-between;
+
+            &-body {
+                column-gap: 32px;
+            }
+
+            &-foot {
+                grid-template-columns: 1.5fr 1fr;
+                column-gap: 16px;
+            }
         }
     }
 
     @media (max-width: 767px) {
         &__cards {
+
+            &-caption {
+                color: $core-grey-700;
+            }
+
             &-btn {
                 min-width: 140px;
             }
+
         }
     }
 }
