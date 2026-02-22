@@ -19,6 +19,7 @@
 
 /* ==================== COMMON ==================== */
 
+@use 'common/icon';
 @use 'common/btn';
 @use 'common/logo';
 @use 'common/tabs';
@@ -34,6 +35,4 @@
 @use 'blocks/layout';
 @use 'blocks/header';
 @use 'blocks/content';
-
-
 @use 'blocks/balance';

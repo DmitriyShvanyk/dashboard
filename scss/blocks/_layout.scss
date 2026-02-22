@@ -1,11 +1,11 @@
 @use '../abstracts/variable' as *;
 
 .layout {
-    width: calc(100% - 160px);
+    width: 100%;
 
-    @media (max-width: 767px) {
-        & {
-            width: 100%;
+    @media (min-width: 768px) {
+        & {            
+            width: calc(100% - 160px);
         }
     }
 }

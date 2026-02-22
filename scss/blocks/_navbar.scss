@@ -2,7 +2,7 @@
 
 .navbar {
     height: 42px;
-    background-color: $core-blue-800;    
+    background-color: $core-blue-800;
     display: none;
     align-items: center;
     justify-content: space-between;
@@ -25,7 +25,9 @@
     @media (max-width: 767px) {
         & {
             display: flex;
-            position: sticky; top: 0; left: 0;
+            position: sticky;
+            top: 0;
+            left: 0;
         }
     }
 }

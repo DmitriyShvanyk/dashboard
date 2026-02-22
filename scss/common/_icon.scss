@@ -1,0 +1,8 @@
+@use '../base/mixin' as *;
+
+.icon {
+    &,
+    svg {
+        @include size(24px);
+    }
+}

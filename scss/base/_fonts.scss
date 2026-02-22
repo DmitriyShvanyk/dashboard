@@ -1,31 +1,6 @@
-@font-face {
-    font-family: 'Gibson';
-    src: url('../fonts/Gibson.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+@use '../base/mixin' as *;
 
-@font-face {
-    font-family: 'Gibson';
-    src: url('../fonts/Gibson-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gibson';
-    src: url('../fonts/Gibson-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gibson';
-    src: url('../fonts/Gibson-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+@include font-face('Gibson', '../fonts/Gibson', 400);
+@include font-face('Gibson', '../fonts/Gibson-Medium', 500);
+@include font-face('Gibson', '../fonts/Gibson-SemiBold', 600);
+@include font-face('Gibson', '../fonts/Gibson-Bold', 700);
